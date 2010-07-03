@@ -14,7 +14,7 @@ if (!defined('DC_RC_PATH')) { return; }
 class dcSocializeFacebook extends dcSocialize
 {
     const SCRIPT_URL_ILIKE = 'http://www.facebook.com/plugins/like.php';
-    const SCRIPT_URL_Share = 'http://static.ak.fbcdn.net/connect.php/js/FB.Share';
+    const SCRIPT_URL_SHARE = 'http://static.ak.fbcdn.net/connect.php/js/FB.Share';
 
 
 
@@ -51,12 +51,20 @@ class dcSocializeFacebook extends dcSocialize
 
 
         /* Share */
-        $w->create('dcSocializeFacebookShareWidget', __('Socialize: Facebook, Share'),
+        $w->create('dcSocializeFacebookShare', __('Socialize: Facebook, Share'),
             array('dcSocializeFacebook','facebookShareWidget'));
 
-        $w->dcSocializeFacebookShareWidget->setting('title',__('Title (optional):'), '','text');
-        $w->dcSocializeFacebookShareWidget->setting('homeonly',__('Home page only'), 0,'check');
-        $w->dcSocializeFacebookShareWidget->setting('homeexcept',__('Not in homepage:'), 0,'check');
+        $w->dcSocializeFacebookShare->setting('title',__('Title (optional):'), '','text');
+
+        $w->dcSocializeFacebookShare->setting('style',__('Style:'), 'box_count','combo',array(
+            __("Box count") => 'box_count',
+            __("Button count") => 'button_count',
+            __("Button") => 'button',
+            __("Icon with link") => 'icon_link',
+            __("Icon") => 'icon' ) );
+
+        $w->dcSocializeFacebookShare->setting('homeonly',__('Home page only'), 0,'check');
+        $w->dcSocializeFacebookShare->setting('homeexcept',__('Not in homepage:'), 0,'check');
     }
 
 
@@ -141,9 +149,8 @@ class dcSocializeFacebook extends dcSocialize
 
     	return '<div class="' . self::WIDGET_CSS_CLASSES . 'facebook_share" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetFacebookShare' . self::getWidgetCounter($w, 'WidgetFacebookShare') . '">
         ' . self::getWidgetTitle($w) . '
-    	<a expr:share_url="data:post.url" name="fb_share" rel="nofollow" type="box_count">Partager</a>
-        <script src="' . self::SCRIPT_URL_Share . '" type="text/javascript"></script>
-        <div style="height: 0px; font-size: 0px;clear: both"> </div>
+        <a name="fb_share" type="' . $w->style . '">' . __('Share'). '</a>
+        <script src="' . self::SCRIPT_URL_SHARE . '" type="text/javascript"></script>
         </div>';
     }
 

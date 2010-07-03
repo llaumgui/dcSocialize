@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dcSocialize\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-03 12:54+0100\n"
+"POT-Creation-Date: 2010-07-03 15:40+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Guillaume Kulakowski <guillaume AT llaumgui DOT com>\n"
 "Language-Team: dcSocilize team <guillaume AT llaumgui DOT com>\n"
@@ -48,7 +48,7 @@ msgstr "Exclure les réponses"
 #: ../../classes/dcsocializetwitter.php:50
 #: ../../classes/dcsocializeaddthis.php:43
 #: ../../classes/dcsocializefacebook.php:48
-#: ../../classes/dcsocializefacebook.php:58
+#: ../../classes/dcsocializefacebook.php:66
 msgid "Home page only"
 msgstr "Page d'accueil uniquement"
 
@@ -59,12 +59,13 @@ msgstr "Socialize : TweetMeme"
 #: ../../classes/dcsocializetwitter.php:46
 #: ../../classes/dcsocializeaddthis.php:35
 #: ../../classes/dcsocializefacebook.php:33
+#: ../../classes/dcsocializefacebook.php:59
 msgid "Style:"
 msgstr "Style :"
 
 #: ../../classes/dcsocializetwitter.php:51
 #: ../../classes/dcsocializefacebook.php:49
-#: ../../classes/dcsocializefacebook.php:59
+#: ../../classes/dcsocializefacebook.php:67
 msgid "Not in homepage:"
 msgstr "Pas sur la page d'accueil :"
 
@@ -77,6 +78,7 @@ msgid "Text (optional):"
 msgstr "Texte (facultatif) :"
 
 #: ../../classes/dcsocializeaddthis.php:33
+#: ../../classes/dcsocializefacebook.php:152
 msgid "Share"
 msgstr "Partager"
 
@@ -113,6 +115,7 @@ msgid "Standard"
 msgstr "Standard"
 
 #: ../../classes/dcsocializefacebook.php:35
+#: ../../classes/dcsocializefacebook.php:62
 msgid "Button"
 msgstr "Bouton"
 
@@ -155,4 +158,20 @@ msgstr "Utiliser l'URL de la page d'accueil pour les pages autres que les posts 
 #: ../../classes/dcsocializefacebook.php:54
 msgid "Socialize: Facebook, Share"
 msgstr "Socialize : Facebook, Partager"
+
+#: ../../classes/dcsocializefacebook.php:60
+msgid "Box count"
+msgstr "Boite avec compteur"
+
+#: ../../classes/dcsocializefacebook.php:61
+msgid "Button count"
+msgstr "Bouton avec compteur"
+
+#: ../../classes/dcsocializefacebook.php:63
+msgid "Icon with link"
+msgstr "Icône avec lien"
+
+#: ../../classes/dcsocializefacebook.php:64
+msgid "Icon"
+msgstr "Icône"
 
