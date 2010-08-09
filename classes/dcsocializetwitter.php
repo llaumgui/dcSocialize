@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 # -- BEGIN LICENSE BLOCK ----------------------------------
 #
 # This file is part of dcSocialize.
@@ -121,7 +121,7 @@ class dcSocializeTwitter extends dcSocialize
             break;
         }
 
-        return '<div ' . $style .'class="' . self::WIDGET_CSS_CLASSES . 'tweetmeme" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTweetMemeButton' . $counter . '">
+        return '<div class="' . self::WIDGET_CSS_CLASSES . 'tweetmeme" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTweetMemeButton' . $counter . '">
         ' . self::getWidgetTitle($w) .
         '<div id="replace_widget_tweetmeme_' . $counter . '"></div>' .
         '<script type="text/javascript">//<![CDATA[
