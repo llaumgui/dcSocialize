@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 # -- BEGIN LICENSE BLOCK ----------------------------------
 #
 # This file is part of dcSocialize.
@@ -15,7 +15,7 @@ $this->registerModule(
     /* Name */              "dcSocialize",
     /* Description*/        "A collection of socialize widgets for Dotclear",
     /* Author */            "Guillaume Kulakowski",
-    /* Version */           '0.9',
+    /* Version */           '1.0',
     /* Permissions */       'admin'
 );
 
