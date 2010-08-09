@@ -61,7 +61,7 @@ class dcSocializeTwitter extends dcSocialize
      */
     public static function twitterWidget($w)
     {
-        if ( self::isHomeExcept($w) )
+        if ( self::isHomeOnly($w) )
             return;
 
         $counter = self::getWidgetCounter($w, 'WidgetTwitter');
