@@ -127,7 +127,7 @@ class dcSocializeTwitter extends dcSocialize
         '<script type="text/javascript">//<![CDATA[
         $(document).ready(function(){' .
             '$object_code=\'<object data="http://api.tweetmeme.com/button.js?' .
-                    'url=\' + escape(document.URL) + \'' .
+                    'url=\' + document.URL + \'' .
                     '&amp;style=' .  $w->style .
                     '&amp;source=seo' .
                     '&amp;width=' . $width .
