@@ -1,3 +1,8 @@
+dcSocialize 1.0.1 (2010-08-09)
+===========================
+ - Fix issue 73 (DcSocialize - headers already sent)
+ - Fix issue 74 (DcSocialize - Tweetmeme double encoding of URL)
+
 dcSocialize 1.0 (2010-08-09)
 ===========================
  - Fix issue 70 (Notice on dcSocialize in dcsocializetwitter)
