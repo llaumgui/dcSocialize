@@ -112,7 +112,7 @@ class dcSocializeFacebook extends dcSocialize
         '<div id="replace_widget_facebook_ilike_' . $counter . '"></div>' .
         '<script type="text/javascript">//<![CDATA[
         $(document).ready(function(){' .
-            '$object_code=\'<object data="' . self::SCRIPT_URL_ILIKE . '?' .
+            '$object_code=\'<iframe src="' . self::SCRIPT_URL_ILIKE . '?' .
                     'href=' . $link .
                     '&amp;layout=' . $w->style .
                     '&amp;show_faces=' . $showface .
@@ -122,7 +122,7 @@ class dcSocializeFacebook extends dcSocialize
                     '&amp;colorscheme=' . $w->colorscheme .
                     '&amp;height=' . $w->height . '"' .
                 'style="border:none;overflow:hidden;width:100%;height:' . $w->height . 'px;"> ' .
-            '</object>\';' .
+            '</iframe>\';' .
             '$replace_me=$(\'#replace_widget_facebook_ilike_' . $counter . '\'); ' .
             '$replace_me.replaceWith($object_code);' .
         '});

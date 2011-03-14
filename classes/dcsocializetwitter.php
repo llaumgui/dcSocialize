@@ -126,14 +126,14 @@ class dcSocializeTwitter extends dcSocialize
         '<div id="replace_widget_tweetmeme_' . $counter . '"></div>' .
         '<script type="text/javascript">//<![CDATA[
         $(document).ready(function(){' .
-            '$object_code=\'<object data="http://api.tweetmeme.com/button.js?' .
+            '$object_code=\'<iframe src="http://api.tweetmeme.com/button.js?' .
                     'url=\' + document.URL + \'' .
                     '&amp;style=' .  $w->style .
                     '&amp;source=seo' .
                     '&amp;width=' . $width .
                     '&amp;height=' . $height . '"'.
                 'style="border:none;overflow:hidden;width:' . $width . 'px;height:' . $height . 'px"> ' .
-            '</object>\';' .
+            '</iframe>\';' .
             '$replace_me=$(\'#replace_widget_tweetmeme_' . $counter . '\'); ' .
             '$replace_me.replaceWith($object_code);' .
         '});
