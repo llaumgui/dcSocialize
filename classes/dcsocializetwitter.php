@@ -68,7 +68,7 @@ class dcSocializeTwitter extends dcSocialize
 
     	return '<div class="' . self::WIDGET_CSS_CLASSES . 'twitter" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTwitter' . $counter . '">
         ' . self::getWidgetTitle($w) .
-        '    <ul class="user_timeline"><li class="loading">&nbsp;</li></ul>
+        '    <ul class="user_timeline"><li class="loading"> </li></ul>
 		</div>
 		<script type="text/javascript">//<![CDATA[
 		$(document).ready(function(){' .
