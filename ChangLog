@@ -1,3 +1,7 @@
+dcSocialize 1.0.2 (2011-05-17)
+==============================
+ - Fix issue 104 (J'aime ne s'affiche pas sur IE)
+
 dcSocialize 1.0.1 (2010-08-09)
 ===========================
  - Fix issue 73 (DcSocialize - headers already sent)
