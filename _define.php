@@ -15,7 +15,7 @@ $this->registerModule(
     /* Name */              "dcSocialize",
     /* Description*/        "A collection of socialize widgets for Dotclear",
     /* Author */            "Guillaume Kulakowski",
-    /* Version */           '1.0.2',
+    /* Version */           '1.1.0',
     /* Permissions */       'admin'
 );
 
