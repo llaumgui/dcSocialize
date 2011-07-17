@@ -12,7 +12,7 @@ AddThis
 -------
 [AddThis](http://www.addthis.com/) widget (formerly known as dcWidgetAddThis),
 
-![AddThis Widget](/media/upload/dcsocialize/files/dcSocialize_AddThis_widget.png "AddThis Widget")
+![AddThis Widget](http://www.llaumgui.com/public/files/dcsocialize/dcSocialize_AddThis_widget.png "AddThis Widget")
 
 Facebook
 --------
@@ -21,19 +21,19 @@ Facebook
  * I Like widget (formerly known as dcWidgetFacebook),
  * Share widget.
 
-![Facebook - I Like](/media/upload/dcsocialize/files/dcSocialize_FacebookILike_widget.png "Facebook -  I Like")
-![Facebook - Share](/media/upload/dcsocialize/files/dcSocialize_FacebookShare_widget.png "Facebook - Share")
+![Facebook - I Like](http://www.llaumgui.com/public/files/dcsocialize/dcSocialize_FacebookILike_widget.png "Facebook -  I Like")
+![Facebook - Share](http://www.llaumgui.com/public/files/dcsocialize/dcSocialize_FacebookShare_widget.png "Facebook - Share")
 
 Twitter
 -------
  * [Twitter](http://twitter.com) and/or [Identi.ca](http://identi.ca/) widget (formerly known as dcWidgetTwitter),
 
-![Twitter](/media/upload/dcsocialize/files/dcSocialize_Twitter_widget.png "Twitter")
+![Twitter](http://www.llaumgui.com/public/files/dcsocialize/dcSocialize_Twitter_widget.png "Twitter")
 
  * [TweetMeMe](http://twitter.com) Button widget.
 
-![Twitter](/media/upload/dcsocialize/files/dcSocialize_TweetMemeButton_widget.png "TweetMeMe Button widget")
+![Twitter](http://www.llaumgui.com/public/files/dcsocialize/dcSocialize_TweetMemeButton_widget.png "TweetMeMe Button widget")
 
 Important
 =========
-dcSocialize uses [jQuery](http://jquery.com) and loads data after that document is ready (the page is loaded) for best performance._
+dcSocialize uses [jQuery](http://jquery.com) and loads data after that document is ready (the page is loaded) for best performance.
