@@ -13,7 +13,6 @@ if (!defined('DC_RC_PATH')) { return; }
 
 class dcSocializeAddThis extends dcSocialize
 {
-
 	const SCRIPT_URL_WIDGET = 'http://s7.addthis.com/js/250/addthis_widget.js';
 	const SCRIPT_URL_BOOKMARK = 'http://www.addthis.com/bookmark.php';
 
@@ -29,18 +28,18 @@ class dcSocializeAddThis extends dcSocialize
         $w->create('dcSocializeAddThis', __('Socialize: AddThis'),
             array('dcSocializeAddThis','addThisWidget'));
 
-        $w->dcSocializeAddThis->setting('title',__('Title (optional):'), '','text');
-        $w->dcSocializeAddThis->setting('text',__('Text (optional):'), __('Share'),'text');
+        $w->dcSocializeAddThis->setting('title', __('Title (optional):'), '','text');
+        $w->dcSocializeAddThis->setting('text', __('Text (optional):'), __('Share'),'text');
 
-        $w->dcSocializeAddThis->setting('style',__('Style:'), null,'combo',array(
+        $w->dcSocializeAddThis->setting('style', __('Style:'), null,'combo',array(
             __("Button with text") => 'buttonWithText',
             __("Button without icon") => 'buttonWithoutIcon',
             __("Toolbox") => 'toolbox' ) );
 
-        $w->dcSocializeAddThis->setting('services',__('Services (for toolbar):'), 'twitter,googlebuzz,facebook,delicious,google,digg','text');
-        $w->dcSocializeAddThis->setting('separator',__("Separator (for toolbar):"), '|','text');
-        $w->dcSocializeAddThis->setting('username',__("Username (optional):"), '','text');
-        $w->dcSocializeAddThis->setting('homeonly',__('Home page only'), 0,'check');
+        $w->dcSocializeAddThis->setting('services', __('Services (for toolbar):'), 'twitter,googlebuzz,facebook,delicious,google,digg','text');
+        $w->dcSocializeAddThis->setting('separator', __("Separator (for toolbar):"), '|','text');
+        $w->dcSocializeAddThis->setting('username', __("Username (optional):"), '','text');
+        $w->dcSocializeAddThis->setting('homeonly', __('Home page only'), 0,'check');
     }
 
 

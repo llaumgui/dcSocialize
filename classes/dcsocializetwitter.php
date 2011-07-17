@@ -25,30 +25,30 @@ class dcSocializeTwitter extends dcSocialize
         $w->create('dcSocializeTwitter', __('Socialize: Twitter'),
             array('dcSocializeTwitter','twitterWidget'));
 
-        $w->dcSocializeTwitter->setting('title',__('Title (optional):'), 'Twitter','text');
+        $w->dcSocializeTwitter->setting('title', __('Title (optional):'), 'Twitter','text');
 
-        $w->dcSocializeTwitter->setting('url',__('Service:'), 'http://twitter.com', 'combo', array(
+        $w->dcSocializeTwitter->setting('url', __('Service:'), 'http://twitter.com', 'combo', array(
                 'Twitter' => 'http://twitter.com',
                 'Identi.ca' => 'http://identi.ca/api' ) );
 
-        $w->dcSocializeTwitter->setting('account',__('Twitter/Identi.ca identifier:'), '','text');
-        $w->dcSocializeTwitter->setting('count',__("Number of tweets to display:"), '5','text');
-        $w->dcSocializeTwitter->setting('noreplies',__("Exclude replies"), 0,'check');
-        $w->dcSocializeTwitter->setting('homeonly',__('Home page only'), 0,'check');
+        $w->dcSocializeTwitter->setting('account', __('Twitter/Identi.ca identifier:'), '','text');
+        $w->dcSocializeTwitter->setting('count', __("Number of tweets to display:"), '5','text');
+        $w->dcSocializeTwitter->setting('noreplies', __("Exclude replies"), 0,'check');
+        $w->dcSocializeTwitter->setting('homeonly', __('Home page only'), 0,'check');
 
 
-        /* TweetMeme Widget */
+        // TweetMeme Widget
         $w->create('dcSocializeTweetMemeButton', __('Socialize: TweetMeme'),
             array('dcSocializeTwitter','tweetMemeButtonWidget'));
 
-        $w->dcSocializeTweetMemeButton->setting('title',__('Title (optional):'), '','text');
+        $w->dcSocializeTweetMemeButton->setting('title', __('Title (optional):'), '','text');
 
-        $w->dcSocializeTweetMemeButton->setting('style',__('Style:'), 'normal', 'combo', array(
+        $w->dcSocializeTweetMemeButton->setting('style', __('Style:'), 'normal', 'combo', array(
                 'Normal' => 'normal',
                 'Compact' => 'compact' ) );
 
-        $w->dcSocializeTweetMemeButton->setting('homeonly',__('Home page only'), 0,'check');
-        $w->dcSocializeTweetMemeButton->setting('homeexcept',__('Not in homepage:'), 0,'check');
+        $w->dcSocializeTweetMemeButton->setting('homeonly', __('Home page only'), 0,'check');
+        $w->dcSocializeTweetMemeButton->setting('homeexcept', __('Not in homepage:'), 0,'check');
     }
 
 

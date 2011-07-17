@@ -29,42 +29,42 @@ class dcSocializeFacebook extends dcSocialize
         $w->create('dcSocializeFacebookILike', __('Socialize: Facebook, I like'),
             array('dcSocializeFacebook','facebookILikeWidget'));
 
-        $w->dcSocializeFacebookILike->setting('title',__('Title (optional):'), '','text');
-        $w->dcSocializeFacebookILike->setting('style',__('Style:'), 'button_count','combo',array(
+        $w->dcSocializeFacebookILike->setting('title', __('Title (optional):'), '','text');
+        $w->dcSocializeFacebookILike->setting('style', __('Style:'), 'button_count','combo',array(
             __("Standard") => 'standard',
             __("Button") => 'button_count' ) );
 
-        $w->dcSocializeFacebookILike->setting('showface',__('Show Face:'), 1,'check');
+        $w->dcSocializeFacebookILike->setting('showface', __('Show Face:'), 1,'check');
 
-        $w->dcSocializeFacebookILike->setting('action',__('Verb to display:'), 'like','combo',array(
+        $w->dcSocializeFacebookILike->setting('action', __('Verb to display:'), 'like','combo',array(
             __("Like") => 'like',
             __("Recommend") => 'recommend' ) );
 
-        $w->dcSocializeFacebookILike->setting('colorscheme',__('Color Scheme:'), 'light','combo',array(
+        $w->dcSocializeFacebookILike->setting('colorscheme', __('Color Scheme:'), 'light','combo',array(
             __("Light") => 'light',
             __("Dark") => 'dark' ) );
 
-        $w->dcSocializeFacebookILike->setting('height',__('Height:'), '80','text');
-        $w->dcSocializeFacebookILike->setting('homeonly',__('Home page only'), 0,'check');
-        $w->dcSocializeFacebookILike->setting('homeexcept',__('Not in homepage:'), 0,'check');
-        $w->dcSocializeFacebookILike->setting('usehomepage',__('Use homepage URL for other page than post:'), 1,'check');
+        $w->dcSocializeFacebookILike->setting('height', __('Height:'), '80','text');
+        $w->dcSocializeFacebookILike->setting('homeonly', __('Home page only'), 0,'check');
+        $w->dcSocializeFacebookILike->setting('homeexcept', __('Not in homepage:'), 0,'check');
+        $w->dcSocializeFacebookILike->setting('usehomepage', __('Use homepage URL for other page than post:'), 1,'check');
 
 
-        /* Share */
+        // Share
         $w->create('dcSocializeFacebookShare', __('Socialize: Facebook, Share'),
             array('dcSocializeFacebook','facebookShareWidget'));
 
-        $w->dcSocializeFacebookShare->setting('title',__('Title (optional):'), '','text');
+        $w->dcSocializeFacebookShare->setting('title', __('Title (optional):'), '','text');
 
-        $w->dcSocializeFacebookShare->setting('style',__('Style:'), 'box_count','combo',array(
+        $w->dcSocializeFacebookShare->setting('style', __('Style:'), 'box_count','combo',array(
             __("Box count") => 'box_count',
             __("Button count") => 'button_count',
             __("Button") => 'button',
             __("Icon with link") => 'icon_link',
             __("Icon") => 'icon' ) );
 
-        $w->dcSocializeFacebookShare->setting('homeonly',__('Home page only'), 0,'check');
-        $w->dcSocializeFacebookShare->setting('homeexcept',__('Not in homepage:'), 0,'check');
+        $w->dcSocializeFacebookShare->setting('homeonly', __('Home page only'), 0,'check');
+        $w->dcSocializeFacebookShare->setting('homeexcept', __('Not in homepage:'), 0,'check');
     }
 
 

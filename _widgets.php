@@ -19,10 +19,12 @@ $__autoload['dcSocialize'] = dirname(__FILE__).'/classes/dcsocialize.php';
 $__autoload['dcSocializeAddThis'] = dirname(__FILE__).'/classes/dcsocializeaddthis.php';
 $__autoload['dcSocializeFacebook'] = dirname(__FILE__).'/classes/dcsocializefacebook.php';
 $__autoload['dcSocializeTwitter'] = dirname(__FILE__).'/classes/dcsocializetwitter.php';
+$__autoload['dcSocializeGoogle'] = dirname(__FILE__).'/classes/dcsocializegoogle.php';
 
 // Init widgets
 $core->addBehavior('initWidgets', array('dcSocializeAddThis','initWidgets'));
 $core->addBehavior('initWidgets', array('dcSocializeFacebook','initWidgets'));
 $core->addBehavior('initWidgets', array('dcSocializeTwitter','initWidgets'));
+$core->addBehavior('initWidgets', array('dcSocializeGoogle','initWidgets'));
 
 ?>
