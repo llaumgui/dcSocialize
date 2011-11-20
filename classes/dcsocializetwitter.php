@@ -97,8 +97,6 @@ class dcSocializeTwitter extends dcSocialize
      */
     public static function tweetMemeButtonWidget($w)
     {
-        global $core;
-
         if ( self::isHomeExcept($w) )
             return;
 
