@@ -52,8 +52,6 @@ class dcSocializeGoogle extends dcSocialize
      */
     public static function googlePlusWidget($w)
     {
-        global $core;
-
         if ( self::isHomeExcept($w) )
             return;
 
