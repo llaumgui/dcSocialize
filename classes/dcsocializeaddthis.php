@@ -138,7 +138,7 @@ class dcSocializeAddThis extends dcSocialize
         ( $w->username != '' ) ? $username = '&amp;username=' . $w->username : $username = '';
 
         return '<a class="addthis_button" href="' . self::SCRIPT_URL_BOOKMARK . '?v=250' . $username .'">
-            <img src="http://s7.addthis.com/static/btn/v2/' . $btn . '-share-' . $_lang . '.gif" width="' . $width . '" height="16" alt="' . $w->text . '" style="border:0"/>
+            <img src="http://s7.addthis.com/static/btn/v2/' . $btn . '-share-' . $_lang . '.gif" height="16" alt="' . $w->text . '" style="border:0"/>
         </a>';
     }
 
