@@ -34,7 +34,9 @@
         <phingcall target="pdepend" />
         <phingcall target="phpmd" />
         <phingcall target="phpcpd" />
+        <phingcall target="phpcs" />
         <phingcall target="phploc" />
+        <phingcall target="doxygen" />
     </target>
 
 
@@ -62,19 +64,19 @@
         </phpcpd>
     </target>
 
-    <target name="phploc">
-        <exec logoutput="true" dir="${project.basedir}" command="phploc
-            --log-csv '${project.basedir}/build/logs/phploc.csv'
-            '${project.basedir}/${source}'" escape="false" />
-    </target>
-
     <target name="phpcs">
-        <phpcodesniffer standard="Zend">
+        <phpcodesniffer standard="Zeta">
             <fileset dir="${project.basedir}/${source}">
                 <include name="**/*.php"/>
             </fileset>
             <formatter type="checkstyle" outfile="${project.basedir}/build/logs/checkstyle.xml"/>
         </phpcodesniffer>
+    </target>
+
+    <target name="phploc">
+        <exec logoutput="true" dir="${project.basedir}" command="phploc
+            --log-csv '${project.basedir}/build/logs/phploc.csv'
+            '${project.basedir}/${source}'" escape="false" />
     </target>
 
 </project>
