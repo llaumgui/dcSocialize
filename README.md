@@ -48,4 +48,4 @@ dcSocialize uses [jQuery](http://jquery.com) and loads data after that document 
 
 Continuous integration
 ======================
-dcSocialize is under continuous integration: http://ci.llaumgui.com/job/dcSocialize
+dcSocialize is under continuous integration: [http://ci.llaumgui.com/job/dcSocialize](http://ci.llaumgui.com/job/dcSocialize)
