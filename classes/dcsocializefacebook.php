@@ -1,16 +1,21 @@
 <?php
-# -- BEGIN LICENSE BLOCK ----------------------------------
-#
-# This file is part of dcSocialize.
-#
-# Copyright (c) 2010-2011 Guillaume Kulakowski and contributors
-# Licensed under the GPL version 2.0 license.
-# See LICENSE file or
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# -- END LICENSE BLOCK ------------------------------------
-if (!defined('DC_RC_PATH')) { return; }
+/**
+ * File containing the dcSocializeFacebook class
+ *
+ * @version //autogentag//
+ * @package DCSocialize
+ * @copyright Copyright (C) 2010-2011 Guillaume Kulakowski
+ * @license Guillaume Kulakowski all rights reserved
+ */
+if ( !defined( 'DC_RC_PATH' ) ) { return; }
 
+
+/**
+ * The class for Facebook
+ *
+ * @package DCSocialize
+ * @version //autogentag//
+ */
 class dcSocializeFacebook extends dcSocialize
 {
     const SCRIPT_URL_ILIKE = 'http://www.facebook.com/plugins/like.php';
@@ -26,45 +31,45 @@ class dcSocializeFacebook extends dcSocialize
     public static function initWidgets($w)
     {
         // I like
-        $w->create('dcSocializeFacebookILike', __('Socialize: Facebook, I like'),
-            array('dcSocializeFacebook','facebookILikeWidget'));
+        $w->create( 'dcSocializeFacebookILike', __( 'Socialize: Facebook, I like' ),
+            array( 'dcSocializeFacebook','facebookILikeWidget' ) );
 
-        $w->dcSocializeFacebookILike->setting('title', __('Title (optional):'), '','text');
-        $w->dcSocializeFacebookILike->setting('style', __('Style:'), 'button_count','combo',array(
-            __("Standard") => 'standard',
-            __("Button") => 'button_count' ) );
+        $w->dcSocializeFacebookILike->setting( 'title', __( 'Title (optional):' ), '', 'text' );
+        $w->dcSocializeFacebookILike->setting( 'style', __( 'Style:' ), 'button_count', 'combo', array(
+            __( 'Standard' ) => 'standard',
+            __( 'Button' ) => 'button_count' ) );
 
-        $w->dcSocializeFacebookILike->setting('showface', __('Show Face:'), 1,'check');
+        $w->dcSocializeFacebookILike->setting( 'showface', __( 'Show Face:' ), 1, 'check' );
 
-        $w->dcSocializeFacebookILike->setting('action', __('Verb to display:'), 'like','combo',array(
-            __("Like") => 'like',
-            __("Recommend") => 'recommend' ) );
+        $w->dcSocializeFacebookILike->setting( 'action', __( 'Verb to display:' ), 'like', 'combo', array(
+            __( 'Like' ) => 'like',
+            __( 'Recommend' ) => 'recommend' ) );
 
-        $w->dcSocializeFacebookILike->setting('colorscheme', __('Color Scheme:'), 'light','combo',array(
-            __("Light") => 'light',
-            __("Dark") => 'dark' ) );
+        $w->dcSocializeFacebookILike->setting( 'colorscheme', __( 'Color Scheme:' ), 'light', 'combo', array(
+            __( 'Light' ) => 'light',
+            __( 'Dark' ) => 'dark' ) );
 
-        $w->dcSocializeFacebookILike->setting('height', __('Height:'), '80','text');
-        $w->dcSocializeFacebookILike->setting('homeonly', __('Home page only'), 0,'check');
-        $w->dcSocializeFacebookILike->setting('homeexcept', __('Not in homepage:'), 0,'check');
-        $w->dcSocializeFacebookILike->setting('usehomepage', __('Use homepage URL for other page than post:'), 1,'check');
+        $w->dcSocializeFacebookILike->setting( 'height', __( 'Height:' ), '80', 'text' );
+        $w->dcSocializeFacebookILike->setting( 'homeonly', __( 'Home page only' ), 0, 'check' );
+        $w->dcSocializeFacebookILike->setting( 'homeexcept', __( 'Not in homepage:' ), 0, 'check' );
+        $w->dcSocializeFacebookILike->setting( 'usehomepage', __( 'Use homepage URL for other page than post:' ), 1, 'check' );
 
 
         // Share
-        $w->create('dcSocializeFacebookShare', __('Socialize: Facebook, Share'),
-            array('dcSocializeFacebook','facebookShareWidget'));
+        $w->create( 'dcSocializeFacebookShare', __( 'Socialize: Facebook, Share' ),
+            array( 'dcSocializeFacebook', 'facebookShareWidget' ) );
 
-        $w->dcSocializeFacebookShare->setting('title', __('Title (optional):'), '','text');
+        $w->dcSocializeFacebookShare->setting( 'title', __( 'Title (optional):' ), '', 'text' );
 
-        $w->dcSocializeFacebookShare->setting('style', __('Style:'), 'box_count','combo',array(
-            __("Box count") => 'box_count',
-            __("Button count") => 'button_count',
-            __("Button") => 'button',
-            __("Icon with link") => 'icon_link',
-            __("Icon") => 'icon' ) );
+        $w->dcSocializeFacebookShare->setting( 'style', __( 'Style:' ), 'box_count', 'combo', array(
+            __( 'Box count' ) => 'box_count',
+            __( 'Button count' ) => 'button_count',
+            __( 'Button' ) => 'button',
+            __( 'Icon with link' ) => 'icon_link',
+            __( 'Icon' ) => 'icon' ) );
 
-        $w->dcSocializeFacebookShare->setting('homeonly', __('Home page only'), 0,'check');
-        $w->dcSocializeFacebookShare->setting('homeexcept', __('Not in homepage:'), 0,'check');
+        $w->dcSocializeFacebookShare->setting( 'homeonly', __( 'Home page only' ), 0, 'check' );
+        $w->dcSocializeFacebookShare->setting( 'homeexcept', __( 'Not in homepage:' ), 0, 'check' );
     }
 
 
@@ -75,9 +80,9 @@ class dcSocializeFacebook extends dcSocialize
      * @param dcWidget $w
      * @return string
      */
-    public static function facebookILikeWidget($w)
+    public static function facebookILikeWidget( $w )
     {
-    	return dcSocializeFacebook::dcFacebookILikeWidget($w);
+        return dcSocializeFacebook::dcFacebookILikeWidget( $w );
     }
 
 
@@ -92,23 +97,31 @@ class dcSocializeFacebook extends dcSocialize
     {
         global $core;
 
-        if ( self::isHomeExcept($w) )
+        if ( self::isHomeExcept( $w ) )
+        {
             return;
+        }
 
-        if ( self::isHomeOnly($w) )
+        if ( self::isHomeOnly( $w ) )
+        {
             return;
+        }
 
-        if ($w->usehomepage && $core->url->type != 'post' )
+        if ( $w->usehomepage && $core->url->type != 'post' )
+        {
             $link = $core->blog->host;
+        }
         else
+        {
             $link = $core->blog->host . $_SERVER['REQUEST_URI'];
-        $link = urlencode($link);
+        }
+        $link = urlencode( $link );
 
-        $counter = self::getWidgetCounter($w, 'WidgetFacebookILike');
+        $counter = self::getWidgetCounter( $w, 'WidgetFacebookILike' );
         ( $w->showface ) ? $showface = 'true' : $showface = 'false';
 
         return '<div class="' . self::WIDGET_CSS_CLASSES . 'facebook_ilike" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetFacebookILike' . $counter . '">
-        ' . self::getWidgetTitle($w) .
+        ' . self::getWidgetTitle( $w ) .
         '<div id="replace_widget_facebook_ilike_' . $counter . '"></div>' .
         '<script type="text/javascript">//<![CDATA[
         $(document).ready(function(){' .
@@ -141,15 +154,19 @@ class dcSocializeFacebook extends dcSocialize
      */
     public static function facebookShareWidget($w)
     {
-        if ( self::isHomeExcept($w) )
+        if ( self::isHomeExcept( $w ) )
+        {
             return;
+        }
 
-        if ( self::isHomeOnly($w) )
+        if ( self::isHomeOnly( $w ) )
+        {
             return;
+        }
 
-    	return '<div class="' . self::WIDGET_CSS_CLASSES . 'facebook_share" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetFacebookShare' . self::getWidgetCounter($w, 'WidgetFacebookShare') . '">
-        ' . self::getWidgetTitle($w) . '
-        <a name="fb_share" type="' . $w->style . '">' . __('Share'). '</a>
+    	return '<div class="' . self::WIDGET_CSS_CLASSES . 'facebook_share" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetFacebookShare' . self::getWidgetCounter( $w, 'WidgetFacebookShare' ) . '">
+        ' . self::getWidgetTitle( $w ) . '
+        <a name="fb_share" type="' . $w->style . '">' . __( 'Share' ). '</a>
         <script src="' . self::SCRIPT_URL_SHARE . '" type="text/javascript"></script>
         </div>';
     }

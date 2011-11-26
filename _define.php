@@ -1,21 +1,19 @@
 <?php
-# -- BEGIN LICENSE BLOCK ----------------------------------
-#
-# This file is part of dcSocialize.
-#
-# Copyright (c) 2010-2011 Guillaume Kulakowski and contributors
-# Licensed under the GPL version 2.0 license.
-# See LICENSE file or
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# -- END LICENSE BLOCK ------------------------------------
-if (!defined('DC_RC_PATH')) { return; }
+/**
+ * File containing the configuration of the plugin
+ *
+ * @version //autogentag//
+ * @package DCSocialize
+ * @copyright Copyright (C) 2010-2011 Guillaume Kulakowski
+ * @license Guillaume Kulakowski all rights reserved
+ */
+if ( !defined( 'DC_RC_PATH' ) ) { return; }
 
 $this->registerModule(
     /* Name */              "dcSocialize",
     /* Description*/        "A collection of socialize widgets for Dotclear",
     /* Author */            "Guillaume Kulakowski",
-    /* Version */           '1.1.0',
+    /* Version */           '1.2.0',
     /* Permissions */       'admin'
 );
 

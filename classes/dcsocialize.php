@@ -1,16 +1,21 @@
 <?php
-# -- BEGIN LICENSE BLOCK ----------------------------------
-#
-# This file is part of dcSocialize.
-#
-# Copyright (c) 2010-2011 Guillaume Kulakowski and contributors
-# Licensed under the GPL version 2.0 license.
-# See LICENSE file or
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# -- END LICENSE BLOCK ------------------------------------
-if (!defined('DC_RC_PATH')) { return; }
+/**
+ * File containing the dcSocialize class
+ *
+ * @version //autogentag//
+ * @package DCSocialize
+ * @copyright Copyright (C) 2010-2011 Guillaume Kulakowski
+ * @license Guillaume Kulakowski all rights reserved
+ */
+if ( !defined( 'DC_RC_PATH' ) ) { return; }
 
+
+/**
+ * The dcSocialize class is the parent class of all socialize classes
+ *
+ * @package DCSocialize
+ * @version //autogentag//
+ */
 class dcSocialize
 {
     const WIDGET_CSS_ID_PREFIX = 'dcsocialize_';
@@ -28,8 +33,10 @@ class dcSocialize
     {
         global $core;
 
-        if ($w->homeonly && $core->url->type != 'default')
+        if ( $w->homeonly && $core->url->type != 'default' )
+        {
             return true;
+        }
         return false;
     }
 
@@ -46,7 +53,9 @@ class dcSocialize
         global $core;
 
         if ($w->homeexcept && $core->url->type == 'default')
+        {
             return true;
+        }
         return false;
     }
 
@@ -55,10 +64,10 @@ class dcSocialize
     /**
      * Get title
      *
-     * @param $w
-     * @return unknown_type
+     * @param dcWidget $w
+     * @return string
      */
-    public static function getWidgetTitle($w)
+    public static function getWidgetTitle( $w )
     {
         return ( $w->title != '' ) ? $title = '<h2>' . $w->title .'</h2>' : $title = '';
     }
@@ -68,12 +77,13 @@ class dcSocialize
     /**
      * Get and manage counter
      *
-     * @param $w
-     * @return unknown_type
+     * @param dcWidget $w
+     * @param string $key
+     * @return string
      */
     public static function getWidgetCounter($w, $key)
     {
-    	$key = self::WIDGET_CSS_ID_PREFIX.$key.'Counter';
+        $key = self::WIDGET_CSS_ID_PREFIX.$key.'Counter';
         ( !isset( $GLOBALS[$key] ) ) ? $GLOBALS[$key] = 1 : $GLOBALS[$key]++;
 
         return $GLOBALS[$key];

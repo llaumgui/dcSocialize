@@ -1,16 +1,21 @@
 <?php
-# -- BEGIN LICENSE BLOCK ----------------------------------
-#
-# This file is part of dcSocialize.
-#
-# Copyright (c) 2010-2011 Guillaume Kulakowski and contributors
-# Licensed under the GPL version 2.0 license.
-# See LICENSE file or
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# -- END LICENSE BLOCK ------------------------------------
-if (!defined('DC_RC_PATH')) { return; }
+/**
+ * File containing the dcSocializeAddThis class
+ *
+ * @version //autogentag//
+ * @package DCSocialize
+ * @copyright Copyright (C) 2010-2011 Guillaume Kulakowski
+ * @license Guillaume Kulakowski all rights reserved
+ */
+if ( !defined( 'DC_RC_PATH' ) ) { return; }
 
+
+/**
+ * The class for AddThis
+ *
+ * @package DCSocialize
+ * @version //autogentag//
+ */
 class dcSocializeAddThis extends dcSocialize
 {
 	const SCRIPT_URL_WIDGET = 'http://s7.addthis.com/js/250/addthis_widget.js';
@@ -25,21 +30,21 @@ class dcSocializeAddThis extends dcSocialize
      */
     public static function initWidgets($w)
     {
-        $w->create('dcSocializeAddThis', __('Socialize: AddThis'),
-            array('dcSocializeAddThis','addThisWidget'));
+        $w->create( 'dcSocializeAddThis', __( 'Socialize: AddThis' ),
+            array( 'dcSocializeAddThis','addThisWidget' ) );
 
-        $w->dcSocializeAddThis->setting('title', __('Title (optional):'), '','text');
-        $w->dcSocializeAddThis->setting('text', __('Text (optional):'), __('Share'),'text');
+        $w->dcSocializeAddThis->setting( 'title', __( 'Title (optional):' ), '', 'text' );
+        $w->dcSocializeAddThis->setting( 'text', __( 'Text (optional):' ), __( 'Share' ), 'text' );
 
-        $w->dcSocializeAddThis->setting('style', __('Style:'), null,'combo',array(
-            __("Button with text") => 'buttonWithText',
-            __("Button without icon") => 'buttonWithoutIcon',
-            __("Toolbox") => 'toolbox' ) );
+        $w->dcSocializeAddThis->setting( 'style', __( 'Style:' ), null, 'combo', array(
+            __( 'Button with text' ) => 'buttonWithText',
+            __( 'Button without icon' ) => 'buttonWithoutIcon',
+            __( 'Toolbox' ) => 'toolbox' ) );
 
-        $w->dcSocializeAddThis->setting('services', __('Services (for toolbar):'), 'twitter,googlebuzz,facebook,delicious,google,digg','text');
-        $w->dcSocializeAddThis->setting('separator', __("Separator (for toolbar):"), '|','text');
-        $w->dcSocializeAddThis->setting('username', __("Username (optional):"), '','text');
-        $w->dcSocializeAddThis->setting('homeonly', __('Home page only'), 0,'check');
+        $w->dcSocializeAddThis->setting( 'services', __( 'Services (for toolbar):' ), 'twitter,googlebuzz,facebook,delicious,google,digg', 'text' );
+        $w->dcSocializeAddThis->setting( 'separator', __( 'Separator (for toolbar):' ), '|', 'text' );
+        $w->dcSocializeAddThis->setting( 'username', __( 'Username (optional):' ), '', 'text' );
+        $w->dcSocializeAddThis->setting( 'homeonly', __( 'Home page only' ), 0, 'check' );
     }
 
 
@@ -52,18 +57,22 @@ class dcSocializeAddThis extends dcSocialize
      */
     public static function addThisWidget($w)
     {
-        if ( self::isHomeOnly($w) )
+        if ( self::isHomeOnly( $w ) )
+        {
             return;
+        }
 
         // Get style
-        $style = 'get' . ucfirst($w->style);
-        if ( !is_callable( array('self', $style) ) )
+        $style = 'get' . ucfirst( $w->style );
+        if ( !is_callable( array( 'self', $style ) ) )
+        {
             return '';
+        }
 
         ( $w->username != '' ) ? $username = '#username=' . $w->username : $username = '';
 
-        return '<div class="' . self::WIDGET_CSS_CLASSES . 'addthis" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetAddThis' . self::getWidgetCounter($w, 'WidgetAddThis') . '">
-            ' . self::getWidgetTitle($w) .
+        return '<div class="' . self::WIDGET_CSS_CLASSES . 'addthis" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetAddThis' . self::getWidgetCounter( $w, 'WidgetAddThis' ) . '">
+            ' . self::getWidgetTitle( $w ) .
             self::$style( $w ) . '
         </div>
         <script type="text/javascript">//<![CDATA[
@@ -86,8 +95,10 @@ class dcSocializeAddThis extends dcSocialize
         ( $w->username != '' ) ? $username = '&amp;username=' . $w->username : $username = '';
 
         $services = '';
-        foreach ( explode(',', $w->services ) as $s )
-            $services .= '<a class="addthis_button_' . trim($s) .' "></a>';
+        foreach ( explode( ',', $w->services ) as $s )
+        {
+            $services .= '<a class="addthis_button_' . trim( $s ) .' "></a>';
+        }
 
         return '<p class="addthis addthis_toolbox addthis_default_style">
             <a href="' . self::SCRIPT_URL_BOOKMARK . '?v=250' . $username . '" class="addthis_button_compact">' . $w->text . '</a>
@@ -129,7 +140,6 @@ class dcSocializeAddThis extends dcSocialize
      *
      * @param dcWidget $w
      * @param string $btn
-     * @param int $width
      * @return string
      */
     public static function button( &$w, $btn )

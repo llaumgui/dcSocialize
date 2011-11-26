@@ -1,16 +1,21 @@
 <?php
-# -- BEGIN LICENSE BLOCK ----------------------------------
-#
-# This file is part of dcSocialize.
-#
-# Copyright (c) 2010-2011 Guillaume Kulakowski and contributors
-# Licensed under the GPL version 2.0 license.
-# See LICENSE file or
-# http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
-#
-# -- END LICENSE BLOCK ------------------------------------
-if (!defined('DC_RC_PATH')) { return; }
+/**
+ * File containing the dcSocializeTwitter class
+ *
+ * @version //autogentag//
+ * @package DCSocialize
+ * @copyright Copyright (C) 2010-2011 Guillaume Kulakowski
+ * @license Guillaume Kulakowski all rights reserved
+ */
+if ( !defined( 'DC_RC_PATH' ) ) { return; }
 
+
+/**
+ * The class for Google
+ *
+ * @package DCSocialize
+ * @version //autogentag//
+ */
 class dcSocializeTwitter extends dcSocialize
 {
 
@@ -22,38 +27,38 @@ class dcSocializeTwitter extends dcSocialize
     public static function initWidgets($w)
     {
         // Twitter/Identi.ca feed
-        $w->create('dcSocializeTwitter', __('Socialize: Twitter'),
-            array('dcSocializeTwitter','twitterWidget'));
+        $w->create( 'dcSocializeTwitter', __( 'Socialize: Twitter' ),
+            array( 'dcSocializeTwitter','twitterWidget' ) );
 
-        $w->dcSocializeTwitter->setting('title', __('Title (optional):'), 'Twitter','text');
+        $w->dcSocializeTwitter->setting( 'title', __( 'Title (optional):' ), 'Twitter', 'text' );
 
-        $w->dcSocializeTwitter->setting('url', __('Service:'), 'http://twitter.com', 'combo', array(
+        $w->dcSocializeTwitter->setting( 'url', __( 'Service:' ), 'http://twitter.com', 'combo', array(
                 'Twitter' => 'http://twitter.com',
                 'Identi.ca' => 'http://identi.ca/api' ) );
 
-        $w->dcSocializeTwitter->setting('account', __('Twitter/Identi.ca identifier:'), '','text');
-        $w->dcSocializeTwitter->setting('count', __("Number of tweets to display:"), '5','text');
-        $w->dcSocializeTwitter->setting('noreplies', __("Exclude replies"), 0,'check');
-        $w->dcSocializeTwitter->setting('homeonly', __('Home page only'), 0,'check');
+        $w->dcSocializeTwitter->setting( 'account', __( 'Twitter/Identi.ca identifier:' ), '', 'text' );
+        $w->dcSocializeTwitter->setting( 'count', __( 'Number of tweets to display:' ), '5', 'text' );
+        $w->dcSocializeTwitter->setting( 'noreplies', __( 'Exclude replies' ), 0, 'check' );
+        $w->dcSocializeTwitter->setting( 'homeonly', __( 'Home page only' ), 0, 'check' );
 
 
         // TweetMeme Widget
-        $w->create('dcSocializeTweetMemeButton', __('Socialize: TweetMeme'),
-            array('dcSocializeTwitter','tweetMemeButtonWidget'));
+        $w->create( 'dcSocializeTweetMemeButton', __( 'Socialize: TweetMeme' ),
+            array( 'dcSocializeTwitter', 'tweetMemeButtonWidget' ) );
 
-        $w->dcSocializeTweetMemeButton->setting('title', __('Title (optional):'), '','text');
+        $w->dcSocializeTweetMemeButton->setting( 'title', __( 'Title (optional):' ), '', 'text' );
 
-        $w->dcSocializeTweetMemeButton->setting('style', __('Style:'), 'normal', 'combo', array(
+        $w->dcSocializeTweetMemeButton->setting( 'style', __( 'Style:' ), 'normal', 'combo', array(
                 'Normal' => 'normal',
                 'Compact' => 'compact' ) );
 
-        $w->dcSocializeTweetMemeButton->setting('homeonly', __('Home page only'), 0,'check');
-        $w->dcSocializeTweetMemeButton->setting('homeexcept', __('Not in homepage:'), 0,'check');
+        $w->dcSocializeTweetMemeButton->setting( 'homeonly', __( 'Home page only' ), 0, 'check' );
+        $w->dcSocializeTweetMemeButton->setting( 'homeexcept', __( 'Not in homepage:' ), 0, 'check' );
     }
 
 
 
-	/**
+    /**
      * Get widget
      *
      * @param dcWidget $w
@@ -61,29 +66,31 @@ class dcSocializeTwitter extends dcSocialize
      */
     public static function twitterWidget($w)
     {
-        if ( self::isHomeOnly($w) )
+        if ( self::isHomeOnly( $w ) )
+        {
             return;
+        }
 
-        $counter = self::getWidgetCounter($w, 'WidgetTwitter');
+        $counter = self::getWidgetCounter( $w, 'WidgetTwitter' );
 
-    	return '<div class="' . self::WIDGET_CSS_CLASSES . 'twitter" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTwitter' . $counter . '">
-        ' . self::getWidgetTitle($w) .
+        return '<div class="' . self::WIDGET_CSS_CLASSES . 'twitter" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTwitter' . $counter . '">
+        ' . self::getWidgetTitle( $w ) .
         '    <ul class="user_timeline"><li class="loading"> </li></ul>
-		</div>
-		<script type="text/javascript">//<![CDATA[
-		$(document).ready(function(){' .
-    	   '$.getJSON(' .
-    	       '"' .$w->url . '/statuses/user_timeline/' . $w->account . '" +".json?&count=' . $w->count . '&callback=?",' .
-    	       'function(data){' .
-    	           '$ul=$(\'#' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTwitter' . $counter . ' .user_timeline\');' .
-    	           '$ul.empty();' .
-    	           '$.each(data,function(i,post){' .
-    	               ( $w->noreplies ? "if(post.in_reply_to_screen_name){return;}" : "" ) .
-    	               '$ul.append("\<li>"+post.text+"\<\/li>");' .
+        </div>
+        <script type="text/javascript">//<![CDATA[
+        $(document).ready(function(){' .
+           '$.getJSON(' .
+               '"' .$w->url . '/statuses/user_timeline/' . $w->account . '" +".json?&count=' . $w->count . '&callback=?",' .
+               'function(data){' .
+                   '$ul=$(\'#' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTwitter' . $counter . ' .user_timeline\');' .
+                   '$ul.empty();' .
+                   '$.each(data,function(i,post){' .
+                       ( $w->noreplies ? "if(post.in_reply_to_screen_name){return;}" : "" ) .
+                       '$ul.append("\<li>"+post.text+"\<\/li>");' .
                     '});' .
                 '});' .
             '});
-		//]]></script>';
+        //]]></script>';
     }
 
 
@@ -97,21 +104,25 @@ class dcSocializeTwitter extends dcSocialize
      */
     public static function tweetMemeButtonWidget($w)
     {
-        if ( self::isHomeExcept($w) )
+        if ( self::isHomeExcept( $w ) )
+        {
             return;
+        }
 
-        if ( self::isHomeOnly($w) )
+        if ( self::isHomeOnly( $w ) )
+        {
             return;
+        }
 
-        $counter = self::getWidgetCounter($w, 'WidgetTweetMemeButton');
+        $counter = self::getWidgetCounter( $w, 'WidgetTweetMemeButton' );
 
         // Width & height
         switch ( $w->style )
         {
-	    	case 'normal':
-	           	$height = 61;
-	        	$width = 50;
-	        break;
+            case 'normal':
+                   $height = 61;
+                $width = 50;
+            break;
 
             case 'compact':
                 $height = 20;
@@ -120,7 +131,7 @@ class dcSocializeTwitter extends dcSocialize
         }
 
         return '<div class="' . self::WIDGET_CSS_CLASSES . 'tweetmeme" id="' . self::WIDGET_CSS_ID_PREFIX . 'WidgetTweetMemeButton' . $counter . '">
-        ' . self::getWidgetTitle($w) .
+        ' . self::getWidgetTitle( $w ) .
         '<div id="replace_widget_tweetmeme_' . $counter . '"></div>' .
         '<script type="text/javascript">//<![CDATA[
         $(document).ready(function(){' .
