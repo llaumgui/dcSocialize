@@ -79,4 +79,8 @@
             '${project.basedir}/${source}'" escape="false" />
     </target>
 
+    <target name="doxygen">
+        <exec logoutput="true" dir="${project.basedir}" command="doxygen '${project.basedir}/src/utils/build/DoxyFile'" />
+    </target>
+
 </project>
