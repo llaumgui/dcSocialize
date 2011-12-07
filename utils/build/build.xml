@@ -84,7 +84,7 @@
     </target>
 
     <target name="doxygen">
-        <exec logoutput="true" dir="${builddir}" command="doxygen '${sourcedir}/utils/build/DoxyFile'" />
+        <exec logoutput="true" dir="${sourcedir}" command="doxygen 'utils/build/DoxyFile'" />
     </target>
 
 
