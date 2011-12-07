@@ -35,9 +35,11 @@ class dcSocializeFacebook extends dcSocialize
             array( 'dcSocializeFacebook','facebookILikeWidget' ) );
 
         $w->dcSocializeFacebookILike->setting( 'title', __( 'Title (optional):' ), '', 'text' );
-        $w->dcSocializeFacebookILike->setting( 'style', __( 'Style:' ), 'button_count', 'combo', array(
+        $w->dcSocializeFacebookILike->setting( 'style', __( 'Style:' ), 'box_count', 'combo', array(
             __( 'Standard' ) => 'standard',
+            __( 'Box count' ) => 'box_count',
             __( 'Button' ) => 'button_count' ) );
+
 
         $w->dcSocializeFacebookILike->setting( 'showface', __( 'Show Face:' ), 1, 'check' );
 

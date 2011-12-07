@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dcSocialize\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-17 16:17+0100\n"
+"POT-Creation-Date: 2011-11-26 12:57+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: Guillaume Kulakowski <guillaume AT llaumgui DOT com>\n"
 "Language-Team: dcSocilize team <guillaume AT llaumgui DOT com>\n"
@@ -17,190 +17,191 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ../..\n"
 
-#: ../../classes/dcsocializefacebook.php:29
+#: ../../classes/dcsocializefacebook.php:34
 msgid "Socialize: Facebook, I like"
 msgstr "Socialize : Facebook, J'aime"
 
-#: ../../classes/dcsocializefacebook.php:32
-#: ../../classes/dcsocializefacebook.php:57
-#: ../../classes/dcsocializeaddthis.php:31
-#: ../../classes/dcsocializegoogle.php:28
-#: ../../classes/dcsocializetwitter.php:28
-#: ../../classes/dcsocializetwitter.php:44
+#: ../../classes/dcsocializefacebook.php:37
+#: ../../classes/dcsocializefacebook.php:64
+#: ../../classes/dcsocializeaddthis.php:36
+#: ../../classes/dcsocializegoogle.php:36
+#: ../../classes/dcsocializetwitter.php:33
+#: ../../classes/dcsocializetwitter.php:49
 msgid "Title (optional):"
 msgstr "Titre (facultatif) :"
 
-#: ../../classes/dcsocializefacebook.php:33
-#: ../../classes/dcsocializefacebook.php:59
-#: ../../classes/dcsocializeaddthis.php:34
-#: ../../classes/dcsocializetwitter.php:46
+#: ../../classes/dcsocializefacebook.php:38
+#: ../../classes/dcsocializefacebook.php:66
+#: ../../classes/dcsocializeaddthis.php:39
+#: ../../classes/dcsocializetwitter.php:51
 msgid "Style:"
 msgstr "Style :"
 
-#: ../../classes/dcsocializefacebook.php:34
-#: ../../classes/dcsocializegoogle.php:32
+#: ../../classes/dcsocializefacebook.php:39
+#: ../../classes/dcsocializegoogle.php:40
 msgid "Standard"
 msgstr "Standard"
 
-#: ../../classes/dcsocializefacebook.php:35
-#: ../../classes/dcsocializefacebook.php:62
-msgid "Button"
-msgstr "Bouton"
-
-#: ../../classes/dcsocializefacebook.php:37
-msgid "Show Face:"
-msgstr "Afficher les photos :"
-
-#: ../../classes/dcsocializefacebook.php:39
-msgid "Verb to display:"
-msgstr "Verbe utilisé :"
-
 #: ../../classes/dcsocializefacebook.php:40
-msgid "Like"
-msgstr "Aimer"
-
-#: ../../classes/dcsocializefacebook.php:41
-msgid "Recommend"
-msgstr "Recommender"
-
-#: ../../classes/dcsocializefacebook.php:43
-msgid "Color Scheme:"
-msgstr "Jeu de couleurs :"
-
-#: ../../classes/dcsocializefacebook.php:44
-msgid "Light"
-msgstr "Clair"
-
-#: ../../classes/dcsocializefacebook.php:45
-msgid "Dark"
-msgstr "Sombre"
-
-#: ../../classes/dcsocializefacebook.php:47
-msgid "Height:"
-msgstr "Hauteur :"
-
-#: ../../classes/dcsocializefacebook.php:48
-#: ../../classes/dcsocializefacebook.php:66
-#: ../../classes/dcsocializeaddthis.php:42
-#: ../../classes/dcsocializegoogle.php:37
-#: ../../classes/dcsocializetwitter.php:37
-#: ../../classes/dcsocializetwitter.php:50
-msgid "Home page only"
-msgstr "Page d'accueil uniquement"
-
-#: ../../classes/dcsocializefacebook.php:49
 #: ../../classes/dcsocializefacebook.php:67
-#: ../../classes/dcsocializegoogle.php:38
-#: ../../classes/dcsocializetwitter.php:51
-msgid "Not in homepage:"
-msgstr "Pas sur la page d'accueil :"
-
-#: ../../classes/dcsocializefacebook.php:50
-msgid "Use homepage URL for other page than post:"
-msgstr "Utiliser l'URL de la page d'accueil pour les pages autres que les posts :"
-
-#: ../../classes/dcsocializefacebook.php:54
-msgid "Socialize: Facebook, Share"
-msgstr "Socialize : Facebook, Partager"
-
-#: ../../classes/dcsocializefacebook.php:60
 msgid "Box count"
 msgstr "Boite avec compteur"
 
+#: ../../classes/dcsocializefacebook.php:41
+#: ../../classes/dcsocializefacebook.php:69
+msgid "Button"
+msgstr "Bouton"
+
+#: ../../classes/dcsocializefacebook.php:44
+msgid "Show Face:"
+msgstr "Afficher les photos :"
+
+#: ../../classes/dcsocializefacebook.php:46
+msgid "Verb to display:"
+msgstr "Verbe utilisé :"
+
+#: ../../classes/dcsocializefacebook.php:47
+msgid "Like"
+msgstr "Aimer"
+
+#: ../../classes/dcsocializefacebook.php:48
+msgid "Recommend"
+msgstr "Recommender"
+
+#: ../../classes/dcsocializefacebook.php:50
+msgid "Color Scheme:"
+msgstr "Jeu de couleurs :"
+
+#: ../../classes/dcsocializefacebook.php:51
+msgid "Light"
+msgstr "Clair"
+
+#: ../../classes/dcsocializefacebook.php:52
+msgid "Dark"
+msgstr "Sombre"
+
+#: ../../classes/dcsocializefacebook.php:54
+msgid "Height:"
+msgstr "Hauteur :"
+
+#: ../../classes/dcsocializefacebook.php:55
+#: ../../classes/dcsocializefacebook.php:73
+#: ../../classes/dcsocializeaddthis.php:47
+#: ../../classes/dcsocializegoogle.php:45
+#: ../../classes/dcsocializetwitter.php:42
+#: ../../classes/dcsocializetwitter.php:55
+msgid "Home page only"
+msgstr "Page d'accueil uniquement"
+
+#: ../../classes/dcsocializefacebook.php:56
+#: ../../classes/dcsocializefacebook.php:74
+#: ../../classes/dcsocializegoogle.php:46
+#: ../../classes/dcsocializetwitter.php:56
+msgid "Not in homepage:"
+msgstr "Pas sur la page d'accueil :"
+
+#: ../../classes/dcsocializefacebook.php:57
+msgid "Use homepage URL for other page than post:"
+msgstr "Utiliser l'URL de la page d'accueil pour les pages autres que les posts :"
+
 #: ../../classes/dcsocializefacebook.php:61
+msgid "Socialize: Facebook, Share"
+msgstr "Socialize : Facebook, Partager"
+
+#: ../../classes/dcsocializefacebook.php:68
 msgid "Button count"
 msgstr "Bouton avec compteur"
 
-#: ../../classes/dcsocializefacebook.php:63
+#: ../../classes/dcsocializefacebook.php:70
 msgid "Icon with link"
 msgstr "Icône avec lien"
 
-#: ../../classes/dcsocializefacebook.php:64
+#: ../../classes/dcsocializefacebook.php:71
 msgid "Icon"
 msgstr "Icône"
 
-#: ../../classes/dcsocializefacebook.php:152
-#: ../../classes/dcsocializeaddthis.php:32
+#: ../../classes/dcsocializefacebook.php:171
+#: ../../classes/dcsocializeaddthis.php:37
 msgid "Share"
 msgstr "Partager"
 
-#: ../../classes/dcsocializeaddthis.php:28
+#: ../../classes/dcsocializeaddthis.php:33
 msgid "Socialize: AddThis"
 msgstr "Socialize : AddThis"
 
-#: ../../classes/dcsocializeaddthis.php:32
+#: ../../classes/dcsocializeaddthis.php:37
 msgid "Text (optional):"
 msgstr "Texte (facultatif) :"
 
-#: ../../classes/dcsocializeaddthis.php:35
+#: ../../classes/dcsocializeaddthis.php:40
 msgid "Button with text"
 msgstr "Bouton avec texte"
 
-#: ../../classes/dcsocializeaddthis.php:36
+#: ../../classes/dcsocializeaddthis.php:41
 msgid "Button without icon"
 msgstr "Bouton sans icône"
 
-#: ../../classes/dcsocializeaddthis.php:37
+#: ../../classes/dcsocializeaddthis.php:42
 msgid "Toolbox"
 msgstr "Boite à outils"
 
-#: ../../classes/dcsocializeaddthis.php:39
+#: ../../classes/dcsocializeaddthis.php:44
 msgid "Services (for toolbar):"
 msgstr "Services (pour la boite à outils):"
 
-#: ../../classes/dcsocializeaddthis.php:40
+#: ../../classes/dcsocializeaddthis.php:45
 msgid "Separator (for toolbar):"
 msgstr "Séparateur (pour la boite à outils) :"
 
-#: ../../classes/dcsocializeaddthis.php:41
+#: ../../classes/dcsocializeaddthis.php:46
 msgid "Username (optional):"
 msgstr "Nom d'utilisateur (facultatif) :"
 
-#: ../../classes/dcsocializegoogle.php:25
+#: ../../classes/dcsocializegoogle.php:33
 msgid "Socialize: Google+"
 msgstr "Socialize : Google+"
 
-#: ../../classes/dcsocializegoogle.php:30
+#: ../../classes/dcsocializegoogle.php:38
 msgid "Size:"
 msgstr "Taille :"
 
-#: ../../classes/dcsocializegoogle.php:31
+#: ../../classes/dcsocializegoogle.php:39
 msgid "Small"
 msgstr "Petit"
 
-#: ../../classes/dcsocializegoogle.php:33
+#: ../../classes/dcsocializegoogle.php:41
 msgid "Medium"
 msgstr "Moyen"
 
-#: ../../classes/dcsocializegoogle.php:34
+#: ../../classes/dcsocializegoogle.php:42
 msgid "Tall"
 msgstr "Grand"
 
-#: ../../classes/dcsocializegoogle.php:36
+#: ../../classes/dcsocializegoogle.php:44
 msgid "Show counter"
 msgstr "Afficher le compteur"
 
-#: ../../classes/dcsocializetwitter.php:25
+#: ../../classes/dcsocializetwitter.php:30
 msgid "Socialize: Twitter"
 msgstr "Socialize : Twitter"
 
-#: ../../classes/dcsocializetwitter.php:30
+#: ../../classes/dcsocializetwitter.php:35
 msgid "Service:"
 msgstr "Service :"
 
-#: ../../classes/dcsocializetwitter.php:34
+#: ../../classes/dcsocializetwitter.php:39
 msgid "Twitter/Identi.ca identifier:"
 msgstr "Identifiant Twitter/Identi.ca :"
 
-#: ../../classes/dcsocializetwitter.php:35
+#: ../../classes/dcsocializetwitter.php:40
 msgid "Number of tweets to display:"
 msgstr "Nombre de  tweets à afficher :"
 
-#: ../../classes/dcsocializetwitter.php:36
+#: ../../classes/dcsocializetwitter.php:41
 msgid "Exclude replies"
 msgstr "Exclure les réponses"
 
-#: ../../classes/dcsocializetwitter.php:41
+#: ../../classes/dcsocializetwitter.php:46
 msgid "Socialize: TweetMeme"
 msgstr "Socialize : TweetMeme"
 
