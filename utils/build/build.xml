@@ -159,7 +159,6 @@
             ${dir.source}" escape="false" />
     </target>
 
-
     <target name="phploc">
         <exec logoutput="true" dir="${dir.source}" escape="false" command="phploc
             --log-csv '${dir.build}/logs/phploc.csv'
