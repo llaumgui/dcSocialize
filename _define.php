@@ -10,10 +10,10 @@
 if ( !defined( 'DC_RC_PATH' ) ) { return; }
 
 $this->registerModule(
-    /* Name */              "dcSocialize",
+    /* Name */              "dcsocialize",
     /* Description*/        "A collection of socialize widgets for Dotclear",
     /* Author */            "Guillaume Kulakowski",
-    /* Version */           '1.2.0',
+    /* Version */           '//autogentag//',
     /* Permissions */       'admin'
 );
 
