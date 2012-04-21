@@ -251,7 +251,7 @@
         <echo>Build version ${version}</echo>
 
         <delete dir="${dir.zip}/${phing.project.name}-${version}" />
-        <delete dir="${dir.zip}/${phing.project.name}-${version}.zip" />
+        <delete dir="${dir.zip}/plugin-${phing.project.name}-${version}.zip" />
         <mkdir dir="${dir.zip}/${phing.project.name}-${version}" />
 
         <copy todir="${dir.zip}/${phing.project.name}-${version}" >
@@ -270,7 +270,7 @@
             </fileset>
         </foreach>
 
-        <zip destfile="${dir.zip}/${phing.project.name}-${version}.zip"
+        <zip destfile="${dir.zip}/plugin-${phing.project.name}-${version}.zip"
             prefix="${phing.project.name}/">
             <fileset dir="${dir.zip}/${phing.project.name}-${version}">
                 <include name="**/**" />
