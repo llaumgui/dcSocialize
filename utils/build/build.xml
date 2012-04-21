@@ -256,7 +256,9 @@
 
         <copy todir="${dir.zip}/${phing.project.name}-${version}" >
             <fileset dir="${dir.source}">
-                <include name="*.php" />
+                <include name="**/*.php" />
+                <include name="**/*.mo" />
+                <include name="**/*.po" />
                 <include name="*.png" />
                 <include name="doc/*" />
             </fileset>
