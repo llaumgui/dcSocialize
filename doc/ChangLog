@@ -1,3 +1,8 @@
+dcSocialize 1.1.1 (2012-04-21)
+==============================
+ - Rename folder from dcSocialize to dcsocialize
+ - Typo fix (Continuous integration)
+
 dcSocialize 1.1.0 (2011-07-17)
 ==============================
  - Add Google+ widget
