@@ -45,7 +45,3 @@ Twitter
 Important
 =========
 dcSocialize uses [jQuery](http://jquery.com) and loads data after that document is ready (the page is loaded) for best performance.
-
-Continuous integration
-======================
-dcSocialize is under continuous integration: [http://ci.llaumgui.com/job/dcSocialize](http://ci.llaumgui.com/job/dcSocialize)
