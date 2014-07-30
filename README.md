@@ -2,7 +2,7 @@ Introduction
 ============
 dcSocialize is a collection of socials widgets for Dotclear 2.x. You can download dcSocialize:
 
- * [From this forge](http://projects.llaumgui.com/index.php/p/dcsocialize/downloads/),
+ * [From GitHub](https://github.com/llaumgui/dcsocialize),
  * [from DotAddict](http://plugins.dotaddict.org/dc2/details/dcSocialize),
  * Directly from your Dotclear back-office with [daInstaller](http://plugins.dotaddict.org/dc2/details/daInstaller).
 
