@@ -1,3 +1,5 @@
+**This project is discontinued.**
+
 Introduction
 ============
 dcSocialize is a collection of socials widgets for Dotclear 2.x. You can download dcSocialize:
